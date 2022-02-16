@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 
 setup(
-    name="headers_gen",
+    name="la-headers",
     version="0.0.1",
     author="thiagola92",
     packages=find_packages(exclude=["tests"]),

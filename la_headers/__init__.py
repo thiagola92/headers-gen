@@ -1,0 +1,36 @@
+from la_headers.accept import generate_accept
+from la_headers.user_agent import generate_user_agent
+from la_headers.accept_encondig import generate_accept_encoding
+
+
+def generate_headers(
+    browser: str,
+    version: str,
+    os: str,
+    device: str,
+    context: str,
+) -> dict:
+    """
+    browser options:
+        chrome
+        firefox
+
+    version:
+        major.minor.patch
+    
+    os:
+        ...
+
+    device:
+        desktop
+        mobile
+    
+    context:
+        ...
+    """
+
+    return {
+        "Accept": generate_accept(browser, version, context),
+        "Accept-Encoding": generate_accept_encoding(browser, version),
+        "User-Agent": generate_user_agent(browser, version, os, device),
+    }
