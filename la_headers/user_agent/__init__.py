@@ -1,10 +1,10 @@
 # https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/User-Agent
 
 
-from headers_gen.utility import find_best_option
-from headers_gen.user_agent.chrome import CHROME_USER_AGENTS
-from headers_gen.user_agent.safari import SAFARI_USER_AGENTS
-from headers_gen.user_agent.firefox import FIREFOX_USER_AGENTS
+from la_headers.utility import find_best_option
+from la_headers.user_agent.chrome import CHROME_USER_AGENTS
+from la_headers.user_agent.safari import SAFARI_USER_AGENTS
+from la_headers.user_agent.firefox import FIREFOX_USER_AGENTS
 
 
 _user_agents = {

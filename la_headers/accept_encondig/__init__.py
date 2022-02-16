@@ -2,9 +2,9 @@
 # https://www.iana.org/assignments/http-parameters/http-parameters.xml#http-parameters-1
 
 
-from headers_gen.utility import find_best_option
-from headers_gen.accept_encondig.chrome import CHROME_ACCEPT_ENCODINGS
-from headers_gen.accept_encondig.firefox import FIREFOX_ACCEPT_ENCODINGS
+from la_headers.utility import find_best_option
+from la_headers.accept_encondig.chrome import CHROME_ACCEPT_ENCODINGS
+from la_headers.accept_encondig.firefox import FIREFOX_ACCEPT_ENCODINGS
 
 
 _accept_encodings = {

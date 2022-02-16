@@ -2,9 +2,9 @@
 # https://developer.mozilla.org/en-US/docs/Web/HTTP/Content_negotiation/List_of_default_Accept_values
 
 
-from headers_gen.utility import find_best_option
-from headers_gen.accept.chrome import CHROME_ACCEPTS
-from headers_gen.accept.firefox import FIREFOX_ACCEPTS
+from la_headers.utility import find_best_option
+from la_headers.accept.chrome import CHROME_ACCEPTS
+from la_headers.accept.firefox import FIREFOX_ACCEPTS
 
 
 _accepts = {
