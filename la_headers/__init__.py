@@ -32,5 +32,12 @@ def generate_headers(
     return {
         "Accept": generate_accept(browser, version, context),
         "Accept-Encoding": generate_accept_encoding(browser, version),
+        "Accept-Language": None,
+        "Connection": None,
+        "Sec-Ch-Ua": None,
+        "Sec-Ch-Ua-Mobile": None,
+        "Sec-Ch-Ua-Platform": None,
+        "Sec-Gpc": None,
+        "Upgrade-Insecure-Requests": None,
         "User-Agent": generate_user_agent(browser, version, os, device),
     }
