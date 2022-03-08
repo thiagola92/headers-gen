@@ -26,7 +26,12 @@ def generate_headers(
         mobile
     
     context:
-        ...
+        default
+        image
+        video
+        audio
+        script
+        css
     """
 
     return {
