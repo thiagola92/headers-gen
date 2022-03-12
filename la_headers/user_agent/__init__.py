@@ -16,6 +16,6 @@ _user_agents = {
 
 def generate_user_agent(browser: str, version: str, os: str, device: str) -> str:
     options = _user_agents[browser][device]
-    user_agent = find_best_option(version, options).format(version=version, os=os)
+    best_option = find_best_option(version, options).format(version=version, os=os)
 
-    return user_agent
+    return best_option

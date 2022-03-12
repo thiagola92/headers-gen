@@ -15,6 +15,6 @@ _accept_encodings = {
 
 def generate_accept_encoding(browser: str, version: str) -> str:
     options = _accept_encodings[browser]
-    accept_encoding = find_best_option(version, options) or "*/*"
+    best_option = find_best_option(version, options) or "*/*"
 
-    return accept_encoding
+    return best_option

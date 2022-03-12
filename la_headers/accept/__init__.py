@@ -16,10 +16,10 @@ _accepts = {
 def generate_accept(browser: str, version: str, context: str) -> str:
     context_options = _accepts[browser][context]
     default_options = _accepts[browser]["default"]
-    accept = (
+    best_option = (
         find_best_option(version, context_options)
         or find_best_option(version, default_options)
         or "*/*"
     )
 
-    return accept
+    return best_option
