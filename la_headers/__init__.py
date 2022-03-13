@@ -8,8 +8,8 @@ def generate_headers(
     browser: str,
     version: str,
     os: str,
-    device: str,
-    context: str,
+    device: str = "desktop",
+    context: str = "default",
 ) -> dict:
     """
     browser options:
