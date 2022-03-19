@@ -3,19 +3,19 @@
 
 
 from la_headers.utility import find_best_option
-from la_headers.accept.chrome import CHROME_ACCEPTS
-from la_headers.accept.firefox import FIREFOX_ACCEPTS
+from la_headers.accept.chrome import CHROME_ACCEPT
+from la_headers.accept.firefox import FIREFOX_ACCEPT
 
 
-_accepts = {
-    "chrome": CHROME_ACCEPTS,
-    "firefox": FIREFOX_ACCEPTS,
+_accept = {
+    "chrome": CHROME_ACCEPT,
+    "firefox": FIREFOX_ACCEPT,
 }
 
 
 def generate_accept(browser: str, version: str, context: str) -> str:
-    context_options = _accepts[browser][context]
-    default_options = _accepts[browser]["default"]
+    context_options = _accept[browser][context]
+    default_options = _accept[browser]["default"]
     best_option = (
         find_best_option(version, context_options)
         or find_best_option(version, default_options)

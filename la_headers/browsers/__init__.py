@@ -1,11 +1,11 @@
-from browsers.chrome import CHROME_VERSIONS
-from browsers.firefox import FIREFOX_VERSIONS
+from browsers.chrome import CHROME_VERSION
+from browsers.firefox import FIREFOX_VERSION
 from packaging.version import Version
 
-CHROME_VERSIONS.sort(key=lambda v: Version(v))
-CHROME_VERSIONS.reverse()
-CHROME_VERSIONS = tuple(CHROME_VERSIONS)
+CHROME_VERSION.sort(key=lambda v: Version(v))
+CHROME_VERSION.reverse()
+CHROME_VERSION = tuple(CHROME_VERSION)
 
-FIREFOX_VERSIONS.sort(key=lambda v: Version(v))
-FIREFOX_VERSIONS.reverse()
-FIREFOX_VERSIONS = tuple(FIREFOX_VERSIONS)
+FIREFOX_VERSION.sort(key=lambda v: Version(v))
+FIREFOX_VERSION.reverse()
+FIREFOX_VERSION = tuple(FIREFOX_VERSION)

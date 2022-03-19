@@ -1,16 +1,16 @@
 # fmt: off
-FIREFOX_DESKTOP_USER_AGENTS = (
+FIREFOX_DESKTOP_USER_AGENT = (
     ("0", "Mozilla/5.0 ({os}; rv:{version}) Gecko/20100101 Firefox/{version}"),
 )
 
 
-FIREFOX_MOBILE_USER_AGENTS = (
+FIREFOX_MOBILE_USER_AGENT = (
     ("0", "Mozilla/5.0 ({os}; rv:{version}) Gecko/{version} Firefox/{version}"),
 )
 
 
-FIREFOX_USER_AGENTS = {
-    "desktop": FIREFOX_DESKTOP_USER_AGENTS,
-    "mobile": FIREFOX_MOBILE_USER_AGENTS,
+FIREFOX_USER_AGENT = {
+    "desktop": FIREFOX_DESKTOP_USER_AGENT,
+    "mobile": FIREFOX_MOBILE_USER_AGENT,
 }
 # fmt: on

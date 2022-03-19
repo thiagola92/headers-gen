@@ -3,18 +3,18 @@
 
 
 from la_headers.utility import find_best_option
-from la_headers.accept_encondig.chrome import CHROME_ACCEPT_ENCODINGS
-from la_headers.accept_encondig.firefox import FIREFOX_ACCEPT_ENCODINGS
+from la_headers.accept_encondig.chrome import CHROME_ACCEPT_ENCODING
+from la_headers.accept_encondig.firefox import FIREFOX_ACCEPT_ENCODING
 
 
-_accept_encodings = {
-    "chrome": CHROME_ACCEPT_ENCODINGS,
-    "firefox": FIREFOX_ACCEPT_ENCODINGS,
+_accept_encoding = {
+    "chrome": CHROME_ACCEPT_ENCODING,
+    "firefox": FIREFOX_ACCEPT_ENCODING,
 }
 
 
 def generate_accept_encoding(browser: str, version: str) -> str:
-    options = _accept_encodings[browser]
+    options = _accept_encoding[browser]
     best_option = find_best_option(version, options) or "*/*"
 
     return best_option

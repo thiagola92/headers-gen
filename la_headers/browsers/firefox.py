@@ -1,4 +1,4 @@
-FIREFOX_VERSIONS = [
+FIREFOX_VERSION = [
     "98.0a1",
     "97.0b6",
     "97.0b5",
