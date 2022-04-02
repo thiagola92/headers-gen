@@ -25,7 +25,7 @@ def generate_headers(
         windows
         linux
         android
-        macos
+        mac
 
     device:
         desktop
