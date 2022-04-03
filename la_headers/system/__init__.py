@@ -30,9 +30,11 @@ def generate_system(os: str, os_version: str) -> str:
     """
 
     version_options = _version[os]
-    version_format = find_best_option(os_version, version_options)(os_version)
+    version_formated = find_best_option(os_version, version_options)(os_version)
 
     system_options = _system[os]
-    best_option = find_best_option(os_version, system_options).format(os_version=version_format)
+    best_option = find_best_option(os_version, system_options).format(
+        os_version=version_formated
+    )
 
     return best_option
