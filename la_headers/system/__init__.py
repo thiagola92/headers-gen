@@ -33,7 +33,7 @@ def generate_system(os: str, os_version: str) -> str:
     """
 
     version_options = _version[os]
-    version_function = find_best_function(os_version, version_options)
+    version_function = find_best_function(os_version, version_options) or (lambda _: "")
     version_formated = version_function(os_version)
 
     system_options = _system[os]

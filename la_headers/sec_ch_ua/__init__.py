@@ -17,6 +17,6 @@ def generate_sec_ch_ua(browser: str, version: str) -> str:
 
     if best_option:
         major = Version(version).major
-        best_option = best_option.format(major)
+        best_option = best_option.format(major=major)
 
     return best_option

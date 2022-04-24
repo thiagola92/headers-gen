@@ -2,6 +2,7 @@ from unittest import main, TestCase
 
 from la_headers.system import generate_system
 
+
 class TestSystem(TestCase):
     def test_linux(self) -> None:
         print(generate_system("linux", "22.04"))
