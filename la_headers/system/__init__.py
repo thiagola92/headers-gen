@@ -1,5 +1,5 @@
 from typing import Callable
-from la_headers.utility import find_best_option
+from la_headers.utility import find_best_option, find_best_function
 from la_headers.system.mac import MAC_SYSTEM, MAC_VERSION
 from la_headers.system.linux import LINUX_SYSTEM, LINUX_VERSION
 from la_headers.system.android import ANDROID_SYSTEM, ANDROID_VERSION
@@ -27,10 +27,14 @@ def generate_system(os: str, os_version: str) -> str:
         linux
         android
         mac
+
+    os_version:
+        major.minor.patch
     """
 
     version_options = _version[os]
-    version_formated = find_best_option(os_version, version_options)(os_version)
+    version_function = find_best_function(os_version, version_options)
+    version_formated = version_function(os_version)
 
     system_options = _system[os]
     best_option = find_best_option(os_version, system_options).format(

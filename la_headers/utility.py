@@ -1,8 +1,15 @@
-from typing import Any
+from typing import Any, Callable
 from packaging.version import Version
 
 
-def find_best_option(version: str, options: tuple) -> Any | str | None:
+def find_best_option(version: str, options: tuple) -> str | None:
+    for v, o in options:
+        if Version(version) >= Version(v):
+            return o
+    return None
+
+
+def find_best_function(version: str, options: tuple) -> Callable:
     for v, o in options:
         if Version(version) >= Version(v):
             return o
