@@ -1,6 +1,8 @@
+from random import choice
+
 from la_headers.accept import generate_accept
 from la_headers.system import generate_system
-from la_headers.config import generate_random_config
+from la_headers.prefabs import get_prefabs
 from la_headers.sec_ch_ua import generate_sec_ch_ua
 from la_headers.user_agent import generate_user_agent
 from la_headers.accept_encondig import generate_accept_encoding
@@ -18,6 +20,8 @@ def generate_headers(
     context: str = "default",
 ) -> dict:
     """
+    Generate a specific headers.
+
     os:
         windows
         linux
@@ -65,20 +69,59 @@ def generate_headers(
 
 
 def generate_random_headers(
-    os: str | None = None,
-    os_version: str | None = None,
-    browser: str | None = None,
-    version: str | None = None,
-    device: str | None = None,
-    context: str | None = None,
+    os: list[str] = [],
+    os_version: list[str] = [],
+    browser: list[str] = [],
+    version: list[str] = [],
+    device: list[str] = [],
+    context: list[str] = [],
 ) -> dict:
-    config = generate_random_config()
+    """
+    Generate a random headers.  
+    All paramaters are a list of possibilities and
+    empty list means that you accept any possibility in the field.
 
-    config["os"] = os or config["os"]
-    config["os_version"] = os_version or config["os_version"]
-    config["browser"] = browser or config["browser"]
-    config["version"] = version or config["version"]
-    config["device"] = device or config["device"]
-    config["context"] = context or config["context"]
+    os:
+        windows
+        linux
+        android
+        mac
 
-    return generate_headers(**config)
+    os_version:
+        major.minor.patch
+    
+    browser options:
+        chrome
+        firefox
+
+    version:
+        major.minor.patch
+
+    device:
+        desktop
+        mobile
+
+    context:
+        default
+        image
+        video
+        audio
+        script
+        css
+    """
+
+    prefabs = get_prefabs(
+        os=os,
+        os_version=os_version,
+        browser=browser,
+        version=version,
+        device=device,
+        context=context,
+    )
+
+    prefab = choice(prefabs)
+
+    for k in prefab:
+        prefab[k] = choice(prefab[k])
+    
+    return generate_headers(**prefab)

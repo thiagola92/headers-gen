@@ -1,10 +1,10 @@
-from random import choice
+from copy import deepcopy
 
-from la_headers.config.chrome import CHROME_VERSION
-from la_headers.config.firefox import FIREFOX_VERSION
-from la_headers.config.android import ANDROID_VERSION
+from la_headers.browser.chrome import CHROME_VERSION
+from la_headers.browser.firefox import FIREFOX_VERSION
+from la_headers.operating_system.android import ANDROID_VERSION
 
-_options: list[dict] = [
+_prefabs: list[dict] = [
     {
         "os": ["linux"],
         "os_version": ["22.04", "21.10", "21.04"],
@@ -56,10 +56,14 @@ _options: list[dict] = [
 ]
 
 
-def generate_random_config() -> dict:
-    config = dict(choice(_options))
+def get_prefabs(**kwargs) -> dict:
+    prefabs = deepcopy(_prefabs)
 
-    for k in config:
-        config[k] = choice(config[k])
-    
-    return config
+    for field, options in kwargs.items():
+        if not options:
+            continue
+
+        for prefab in prefabs:
+            prefab[field] = [o for o in prefab[field] if o in options]
+
+    return prefabs
