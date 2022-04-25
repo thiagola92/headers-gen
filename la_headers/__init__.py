@@ -78,7 +78,7 @@ def generate_random_headers(
 ) -> dict:
     """
     Generate a random headers.  
-    All paramaters are a list of possibilities and
+    All paramaters are a list of possibilities but
     empty list means that you accept any possibility in the field.
 
     os:
