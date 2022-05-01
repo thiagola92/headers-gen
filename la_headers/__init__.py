@@ -53,7 +53,7 @@ def generate_headers(
 
     system = generate_system(os, os_version)
 
-    return {
+    headers = {
         "Accept": generate_accept(browser, version, context),
         "Accept-Encoding": generate_accept_encoding(browser, version),
         "Accept-Language": None,
@@ -66,6 +66,9 @@ def generate_headers(
         ),
         "User-Agent": generate_user_agent(browser, version, system, device),
     }
+
+    # Remove fields with None
+    return {k:v for k, v in headers.items() if v is not None}
 
 
 def generate_random_headers(
