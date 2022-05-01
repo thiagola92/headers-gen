@@ -63,7 +63,10 @@ def get_prefabs(**kwargs) -> dict:
         if not options:
             continue
 
-        for prefab in prefabs:
+        for prefab in prefabs[:]:
             prefab[field] = [o for o in prefab[field] if o in options]
+
+            if len(prefab[field]) == 0:
+                prefabs.remove(prefab)
 
     return prefabs
