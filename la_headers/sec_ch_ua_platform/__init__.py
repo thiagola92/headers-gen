@@ -1,9 +1,8 @@
 from packaging.version import Version
 
-from la_headers.utility import find_best_option
 from la_headers.sec_ch_ua_platform.chromie import CHROME_SEC_CH_UA_PLATFORM
 from la_headers.sec_ch_ua_platform.firefox import FIREFOX_SEC_CH_UA_PLATFORM
-
+from la_headers.utility import find_best_option
 
 _sec_ch_ua_platform = {
     "chrome": CHROME_SEC_CH_UA_PLATFORM,

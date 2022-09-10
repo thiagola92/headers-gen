@@ -1,9 +1,10 @@
 from typing import Callable
-from la_headers.utility import find_best_option, find_best_function
-from la_headers.system.mac import MAC_SYSTEM, MAC_VERSION
-from la_headers.system.linux import LINUX_SYSTEM, LINUX_VERSION
+
 from la_headers.system.android import ANDROID_SYSTEM, ANDROID_VERSION
+from la_headers.system.linux import LINUX_SYSTEM, LINUX_VERSION
+from la_headers.system.mac import MAC_SYSTEM, MAC_VERSION
 from la_headers.system.windows import WINDOWS_SYSTEM, WINDOWS_VERSION
+from la_headers.utility import find_best_function, find_best_option
 
 _system = {
     "linux": LINUX_SYSTEM,

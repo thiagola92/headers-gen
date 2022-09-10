@@ -1,4 +1,5 @@
 from typing import Callable
+
 from packaging.version import Version
 
 # fmt: off

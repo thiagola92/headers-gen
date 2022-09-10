@@ -1,4 +1,4 @@
-from unittest import main, TestCase
+from unittest import TestCase, main
 
 from la_headers import generate_random_headers
 
