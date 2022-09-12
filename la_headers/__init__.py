@@ -31,7 +31,7 @@ def generate_headers(
 
     os_version:
         major.minor.patch
-    
+
     browser options:
         chrome
         firefox
@@ -69,7 +69,7 @@ def generate_headers(
     }
 
     # Remove fields with None
-    return {k:v for k, v in headers.items() if v is not None}
+    return {k: v for k, v in headers.items() if v is not None}
 
 
 def generate_random_headers(
@@ -81,7 +81,7 @@ def generate_random_headers(
     context: list[str] = [],
 ) -> dict:
     """
-    Generate a random headers.  
+    Generate a random headers.
     All paramaters are a list of possibilities but
     empty list means that you accept any possibility in the field.
 
@@ -93,7 +93,7 @@ def generate_random_headers(
 
     os_version:
         major.minor.patch
-    
+
     browser options:
         chrome
         firefox
@@ -127,5 +127,5 @@ def generate_random_headers(
 
     for k in prefab:
         prefab[k] = choice(prefab[k])
-    
+
     return generate_headers(**prefab)
