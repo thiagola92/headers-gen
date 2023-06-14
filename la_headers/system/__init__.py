@@ -2,8 +2,8 @@ from typing import Callable
 
 from la_headers.system.android import ANDROID_BROWSER_SYSTEM, ANDROID_VERSION
 from la_headers.system.linux import LINUX_BROWSER_SYSTEM, LINUX_VERSION
-from la_headers.system.ubuntu import UBUNTU_BROWSER_SYSTEM, UBUNTU_VERSION
 from la_headers.system.mac import MAC_BROWSER_SYSTEM, MAC_VERSION
+from la_headers.system.ubuntu import UBUNTU_BROWSER_SYSTEM, UBUNTU_VERSION
 from la_headers.system.windows import WINDOWS_BROWSER_SYSTEM, WINDOWS_VERSION
 from la_headers.utility import find_best_function, find_best_option
 
@@ -11,7 +11,7 @@ _system = {
     "android": ANDROID_BROWSER_SYSTEM,
     "linux": LINUX_BROWSER_SYSTEM,
     "mac": MAC_BROWSER_SYSTEM,
-    "ubuntu":UBUNTU_BROWSER_SYSTEM,
+    "ubuntu": UBUNTU_BROWSER_SYSTEM,
     "windows": WINDOWS_BROWSER_SYSTEM,
 }
 
@@ -19,7 +19,7 @@ _version = {
     "android": ANDROID_VERSION,
     "linux": LINUX_VERSION,
     "mac": MAC_VERSION,
-    "ubuntu":UBUNTU_VERSION,
+    "ubuntu": UBUNTU_VERSION,
     "windows": WINDOWS_VERSION,
 }
 
