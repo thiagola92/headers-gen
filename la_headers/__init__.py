@@ -52,7 +52,7 @@ def generate_headers(
         css
     """
 
-    system = generate_system(os, os_version)
+    system = generate_system(os, os_version, browser)
 
     headers = {
         "Accept": generate_accept(browser, version, context),

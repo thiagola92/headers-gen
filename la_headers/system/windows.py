@@ -10,4 +10,9 @@ WINDOWS_SYSTEM: tuple[str, str] = (
 WINDOWS_VERSION: tuple[str, Callable] = (
     ("0", lambda v: str(Version(v).major) + ".0"),
 )
+
+WINDOWS_BROWSER_SYSTEM = {
+    "firefox": WINDOWS_SYSTEM,
+    "chrome": WINDOWS_SYSTEM,
+}
 # fmt: on

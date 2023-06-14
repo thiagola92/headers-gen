@@ -10,4 +10,9 @@ ANDROID_SYSTEM: tuple[str, str] = (
 ANDROID_VERSION: tuple[str, Callable] = (
     ("0", lambda v: str(Version(v).major)),
 )
+
+ANDROID_BROWSER_SYSTEM = {
+    "firefox": ANDROID_SYSTEM,
+    "chrome": ANDROID_SYSTEM,
+}
 # fmt: on

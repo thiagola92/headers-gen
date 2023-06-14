@@ -1,33 +1,37 @@
 from typing import Callable
 
-from la_headers.system.android import ANDROID_SYSTEM, ANDROID_VERSION
-from la_headers.system.linux import LINUX_SYSTEM, LINUX_VERSION
-from la_headers.system.mac import MAC_SYSTEM, MAC_VERSION
-from la_headers.system.windows import WINDOWS_SYSTEM, WINDOWS_VERSION
+from la_headers.system.android import ANDROID_BROWSER_SYSTEM, ANDROID_VERSION
+from la_headers.system.linux import LINUX_BROWSER_SYSTEM, LINUX_VERSION
+from la_headers.system.ubuntu import UBUNTU_BROWSER_SYSTEM, UBUNTU_VERSION
+from la_headers.system.mac import MAC_BROWSER_SYSTEM, MAC_VERSION
+from la_headers.system.windows import WINDOWS_BROWSER_SYSTEM, WINDOWS_VERSION
 from la_headers.utility import find_best_function, find_best_option
 
 _system = {
-    "linux": LINUX_SYSTEM,
-    "android": ANDROID_SYSTEM,
-    "windows": WINDOWS_SYSTEM,
-    "mac": MAC_SYSTEM,
+    "android": ANDROID_BROWSER_SYSTEM,
+    "linux": LINUX_BROWSER_SYSTEM,
+    "mac": MAC_BROWSER_SYSTEM,
+    "ubuntu":UBUNTU_BROWSER_SYSTEM,
+    "windows": WINDOWS_BROWSER_SYSTEM,
 }
 
 _version = {
-    "linux": LINUX_VERSION,
     "android": ANDROID_VERSION,
-    "windows": WINDOWS_VERSION,
+    "linux": LINUX_VERSION,
     "mac": MAC_VERSION,
+    "ubuntu":UBUNTU_VERSION,
+    "windows": WINDOWS_VERSION,
 }
 
 
-def generate_system(os: str, os_version: str) -> str:
+def generate_system(os: str, os_version: str, browser: str) -> str:
     """
     os:
-        windows
-        linux
         android
+        linux
         mac
+        ubuntu
+        windows
 
     os_version:
         major.minor.patch
@@ -37,7 +41,7 @@ def generate_system(os: str, os_version: str) -> str:
     version_function = find_best_function(os_version, version_options) or (lambda _: "")
     version_formated = version_function(os_version)
 
-    system_options = _system[os]
+    system_options = _system[os][browser]
     best_option = find_best_option(os_version, system_options).format(
         os_version=version_formated
     )

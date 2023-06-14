@@ -8,4 +8,9 @@ LINUX_SYSTEM: tuple[str, str] = (
 LINUX_VERSION: tuple[str, Callable] = (
     ("0", lambda _: ""),
 )
+
+LINUX_BROWSER_SYSTEM = {
+    "firefox": LINUX_SYSTEM,
+    "chrome": LINUX_SYSTEM,
+}
 # fmt: on

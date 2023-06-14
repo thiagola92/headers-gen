@@ -8,4 +8,9 @@ MAC_SYSTEM: tuple[str, str] = (
 MAC_VERSION: tuple[str, Callable] = (
     ("0", lambda v: v.replace(".", "_")),
 )
+
+MAC_BROWSER_SYSTEM = {
+    "firefox": MAC_SYSTEM,
+    "chrome": MAC_SYSTEM,
+}
 # fmt: on
