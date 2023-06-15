@@ -1,15 +1,12 @@
 # https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Upgrade-Insecure-Requests
 
 
-from la_headers.gen.upgrade_insecure_requests.chrome import (
-    CHROME_UPGRADE_INSECURE_REQUESTS,
-)
-from la_headers.gen.upgrade_insecure_requests.firefox import (
-    FIREFOX_UPGRADE_INSECURE_REQUESTS,
-)
-from la_headers.gen.upgrade_insecure_requests.safari import (
-    SAFARI_UPGRADE_INSECURE_REQUESTS,
-)
+from la_headers.gen.upgrade_insecure_requests.chrome import \
+    CHROME_UPGRADE_INSECURE_REQUESTS
+from la_headers.gen.upgrade_insecure_requests.firefox import \
+    FIREFOX_UPGRADE_INSECURE_REQUESTS
+from la_headers.gen.upgrade_insecure_requests.safari import \
+    SAFARI_UPGRADE_INSECURE_REQUESTS
 from la_headers.utility import find_best_option
 
 _upgrade_insecure_requests = {

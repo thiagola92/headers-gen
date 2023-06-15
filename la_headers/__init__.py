@@ -6,7 +6,8 @@ from la_headers.gen.sec_ch_ua import generate_sec_ch_ua
 from la_headers.gen.sec_ch_ua_mobile import generate_sec_ch_ua_mobile
 from la_headers.gen.sec_ch_ua_platform import generate_sec_ch_ua_platform
 from la_headers.gen.system import generate_system
-from la_headers.gen.upgrade_insecure_requests import generate_upgrade_insecure_requests
+from la_headers.gen.upgrade_insecure_requests import \
+    generate_upgrade_insecure_requests
 from la_headers.gen.user_agent import generate_user_agent
 from la_headers.prefabs import get_prefabs
 
