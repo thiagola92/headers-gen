@@ -21,6 +21,7 @@ jobs:
       - run: pdm run black
       - run: pdm run isort
       - run: pdm run unittest
+      - run: rm .pdm-python
       - run: |
           if [ "$(git status --porcelain)" != "" ]
           then
