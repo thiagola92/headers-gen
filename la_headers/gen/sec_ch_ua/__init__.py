@@ -1,7 +1,7 @@
 from packaging.version import Version
 
-from la_headers.sec_ch_ua.chromie import CHROME_SEC_CH_UA
-from la_headers.sec_ch_ua.firefox import FIREFOX_SEC_CH_UA
+from la_headers.gen.sec_ch_ua.chromie import CHROME_SEC_CH_UA
+from la_headers.gen.sec_ch_ua.firefox import FIREFOX_SEC_CH_UA
 from la_headers.utility import find_best_option
 
 _sec_ch_ua = {

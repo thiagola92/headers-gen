@@ -1,6 +1,6 @@
 from unittest import TestCase, main
 
-from la_headers.system import generate_system
+from la_headers.gen.system import generate_system
 
 
 class TestSystem(TestCase):

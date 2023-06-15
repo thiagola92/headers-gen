@@ -1,8 +1,8 @@
 from copy import deepcopy
 
-from la_headers.browser.chrome import CHROME_VERSION
-from la_headers.browser.firefox import FIREFOX_VERSION
-from la_headers.operating_system.android import ANDROID_VERSION
+from la_headers.options.browser.chrome import CHROME_VERSION
+from la_headers.options.browser.firefox import FIREFOX_VERSION
+from la_headers.options.operating_system.android import ANDROID_VERSION
 
 _prefabs: list[dict] = [
     {

@@ -1,15 +1,14 @@
 from random import choice
 
-from la_headers.accept import generate_accept
-from la_headers.accept_encondig import generate_accept_encoding
+from la_headers.gen.accept import generate_accept
+from la_headers.gen.accept_encondig import generate_accept_encoding
+from la_headers.gen.sec_ch_ua import generate_sec_ch_ua
+from la_headers.gen.sec_ch_ua_mobile import generate_sec_ch_ua_mobile
+from la_headers.gen.sec_ch_ua_platform import generate_sec_ch_ua_platform
+from la_headers.gen.system import generate_system
+from la_headers.gen.upgrade_insecure_requests import generate_upgrade_insecure_requests
+from la_headers.gen.user_agent import generate_user_agent
 from la_headers.prefabs import get_prefabs
-from la_headers.sec_ch_ua import generate_sec_ch_ua
-from la_headers.sec_ch_ua_mobile import generate_sec_ch_ua_mobile
-from la_headers.sec_ch_ua_platform import generate_sec_ch_ua_platform
-from la_headers.system import generate_system
-from la_headers.upgrade_insecure_requests import \
-    generate_upgrade_insecure_requests
-from la_headers.user_agent import generate_user_agent
 
 
 def generate_headers(
@@ -24,10 +23,11 @@ def generate_headers(
     Generate a specific headers.
 
     os:
-        windows
-        linux
         android
+        linux
         mac
+        ubuntu
+        windows
 
     os_version:
         major.minor.patch
