@@ -1,5 +1,7 @@
 # fmt: off
 FIREFOX_DESKTOP_USER_AGENT = (
+    ("114.0", "Mozilla/5.0 ({system}; rv:109.0) Gecko/20100101 Firefox/{version}"),
+    ("109.0", "Mozilla/5.0 ({system}; rv:109.0) Gecko/20100101 Firefox/{version}"),
     ("0", "Mozilla/5.0 ({system}; rv:{version}) Gecko/20100101 Firefox/{version}"),
 )
 

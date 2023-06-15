@@ -5,7 +5,7 @@ CHROME_SEC_CH_UA_PLATFORM_WINDOWS = (
 
 
 CHROME_SEC_CH_UA_PLATFORM_LINUX = (
-    ("0", "Linux"),
+    ("0", '"Linux"'), # I have to make sure if only linux includes quotes
 )
 
 
