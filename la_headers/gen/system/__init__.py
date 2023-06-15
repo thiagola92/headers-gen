@@ -1,5 +1,3 @@
-from typing import Callable
-
 from la_headers.gen.system.android import ANDROID_BROWSER_SYSTEM, ANDROID_VERSION
 from la_headers.gen.system.linux import LINUX_BROWSER_SYSTEM, LINUX_VERSION
 from la_headers.gen.system.mac import MAC_BROWSER_SYSTEM, MAC_VERSION
