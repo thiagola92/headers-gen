@@ -35,3 +35,6 @@ lint = [
     "black",
     "isort"
 ]
+
+[tool.isort]
+profile = "black"
