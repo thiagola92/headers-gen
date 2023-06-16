@@ -1,6 +1,6 @@
 [project]
 name = "la-headers"
-version = "0.0.1"
+version = "0.0.2"
 description = "Headers generator"
 authors = [
     {name = "thiagola92", email = "thiagola92@gmail.com"}
