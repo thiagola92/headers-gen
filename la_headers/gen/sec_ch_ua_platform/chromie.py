@@ -1,21 +1,25 @@
+# https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Sec-CH-UA-Platform
+# Yes, quotes are inclused in the string.
+
 # fmt: off
 CHROME_SEC_CH_UA_PLATFORM_WINDOWS = (
-    ("0", "Windows"),
+    ("114.0", None),
+    ("0", '"Windows"'),
 )
 
 
 CHROME_SEC_CH_UA_PLATFORM_LINUX = (
-    ("0", '"Linux"'), # I have to make sure if only linux includes quotes
+    ("0", '"Linux"'),
 )
 
 
 CHROME_SEC_CH_UA_PLATFORM_ANDROID = (
-    ("0", "Android"),
+    ("0", '"Android"'),
 )
 
 
 CHROME_SEC_CH_UA_PLATFORM_MAC = (
-    ("0", "macOS"),
+    ("0", '"macOS"'),
 )
 
 

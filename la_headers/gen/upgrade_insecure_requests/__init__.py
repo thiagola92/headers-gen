@@ -1,6 +1,8 @@
 # https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Upgrade-Insecure-Requests
 
-
+from la_headers.gen.upgrade_insecure_requests.brave import (
+    BRAVE_UPGRADE_INSECURE_REQUESTS,
+)
 from la_headers.gen.upgrade_insecure_requests.chrome import (
     CHROME_UPGRADE_INSECURE_REQUESTS,
 )
@@ -13,6 +15,7 @@ from la_headers.gen.upgrade_insecure_requests.safari import (
 from la_headers.utility import find_best_option
 
 _upgrade_insecure_requests = {
+    "brave": BRAVE_UPGRADE_INSECURE_REQUESTS,
     "chrome": CHROME_UPGRADE_INSECURE_REQUESTS,
     "firefox": FIREFOX_UPGRADE_INSECURE_REQUESTS,
     "safari": SAFARI_UPGRADE_INSECURE_REQUESTS,

@@ -7,7 +7,7 @@ from la_headers.options.operating_system.android import ANDROID_VERSION
 _prefabs: list[dict] = [
     {
         "os": ["linux"],
-        "os_version": ["22.04", "21.10", "21.04"],
+        "os_version": ["23.04", "22.10", "22.04"],
         "browser": ["chrome"],
         "version": CHROME_VERSION[:10],
         "device": ["desktop"],
@@ -15,7 +15,7 @@ _prefabs: list[dict] = [
     },
     {
         "os": ["linux"],
-        "os_version": ["22.04", "21.10", "21.04"],
+        "os_version": ["23.04", "22.10", "22.04"],
         "browser": ["firefox"],
         "version": FIREFOX_VERSION[:10],
         "device": ["desktop"],

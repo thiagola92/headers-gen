@@ -59,7 +59,7 @@ def generate_headers(
         "Accept-Encoding": generate_accept_encoding(browser, version),
         "Accept-Language": None,
         "Connection": None,
-        "Sec-Ch-Ua": generate_sec_ch_ua(browser, version),
+        "Sec-Ch-Ua": generate_sec_ch_ua(browser, version, os),
         "Sec-Ch-Ua-Mobile": generate_sec_ch_ua_mobile(browser, version, device),
         "Sec-Ch-Ua-Platform": generate_sec_ch_ua_platform(browser, version, os),
         "Upgrade-Insecure-Requests": generate_upgrade_insecure_requests(

@@ -2,11 +2,13 @@
 # https://developer.mozilla.org/en-US/docs/Web/HTTP/Content_negotiation/List_of_default_Accept_values
 
 
+from la_headers.gen.accept.brave import BRAVE_ACCEPT
 from la_headers.gen.accept.chrome import CHROME_ACCEPT
 from la_headers.gen.accept.firefox import FIREFOX_ACCEPT
 from la_headers.utility import find_best_option
 
 _accept = {
+    "brave": BRAVE_ACCEPT,
     "chrome": CHROME_ACCEPT,
     "firefox": FIREFOX_ACCEPT,
 }
